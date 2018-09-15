@@ -1,5 +1,5 @@
-import java.text.DecimalFormat;
-import javax.swing.JOptionPane;
+import java.text.*;
+import javax.swing.*;
 
 
 public class VoltageDrop
@@ -12,9 +12,7 @@ public class VoltageDrop
 	static double length;
 	static double AWG;
 	static double amount;
-       
-	  
-     
+  
 	
 	public static void main(String[] args) 
 	{
@@ -24,8 +22,6 @@ public class VoltageDrop
 		
 			   DecimalFormat dec = new DecimalFormat("###.##");
 			// JOptionPane window = new JOptionPane(System.in);
-                        
-                   
             
 			// Asks User to select how much AWG they want.
 			
@@ -60,14 +56,12 @@ public class VoltageDrop
 			{
 				JOptionPane.showMessageDialog(null, "Your circuit is okay!" + "\n" + "The voltage at last device is: " + dec.format(redesign) + "\n" + "The Allowable length is: " + dec.format(allowableLength) + " feet.");
 			}
-                        
-                           
+                                 
 			
 		} // end if for AWG equalling to 12
         	
 		else if (input == 14)
-			
-			
+				
 		{
 			String currentInput = JOptionPane.showInputDialog("Please enter the amount of current needed (in Amps): ");
 			double current  = Double.parseDouble(currentInput);
@@ -218,9 +212,6 @@ public class VoltageDrop
       
                         System.exit(0); // close out of the program.
                     }
-                    
-                   
-                     
-                     
+                               
             } // end main method
         } // end public class VoltageDrop
