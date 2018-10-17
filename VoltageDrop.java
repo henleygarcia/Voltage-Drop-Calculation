@@ -26,7 +26,7 @@ public class voltageDropTest {
         // JOptionPane window = new JOptionPane(System.in);
         // Asks User to select how much AWG they want.
         Double[] AWG1 = {12.0, 14.0, 16.0, 18.0, 22.0, 24.0};
-        double input = (Double) JOptionPane.showInputDialog(null, "Please select the amount of AWG", "Voltage Drop Calculation Test",
+        double input = (Double) JOptionPane.showInputDialog(null, "Please select the amount of AWG", "Voltage Drop Calculation",
                 JOptionPane.INFORMATION_MESSAGE, null, AWG1, AWG1[0]);
 
         // Go through based on what the user chooses on the AWG
