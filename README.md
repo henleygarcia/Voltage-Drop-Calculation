@@ -2,6 +2,12 @@
 
 Voltage Drop Calculation by Henley Garcia
 
+# What is Voltage Drop?
+
+Voltage drop is the energy supplied by a voltage source is reduced as electric current moves through the passive elements (elements that do not supply voltage) of an electrical circuit. 
+
+Basically this program calculates it this through wire types in order to calculate Voltage Drop.
+
 
 Change log for Voltage Drop Calculation Program
 
