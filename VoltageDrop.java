@@ -41,7 +41,7 @@ public class voltageDropTest {
                 double redesign = 20.4 - voltageDrop;
                 // Calculating Allowable Length
                 double allowableLength = LENGTH / (2 * current * VD_12);
-                checker(dec, redesign, allowableLength);
+                checker(dec, redesign, allowableLength, current, length);
                 break;
             } // end if for AWG equalling to 12
             case 14: {
@@ -54,7 +54,7 @@ public class voltageDropTest {
                 double redesign = 20.4 - voltageDrop;
                 // Calculating Allowable Length
                 double allowableLength = LENGTH / (2 * current * VD_14);
-                checker(dec, redesign, allowableLength);
+                checker(dec, redesign, allowableLength, current, length);
                 break;
             } // end if for AWG equalling to 14
             case 16: {
@@ -67,7 +67,7 @@ public class voltageDropTest {
                 double redesign = 20.4 - voltageDrop;
                 // Calculating Allowable Length
                 double allowableLength = LENGTH / (2 * current * VD_16);
-                checker(dec, redesign, allowableLength);
+                checker(dec, redesign, allowableLength, current, length);
                 break;
             } // end if for AWG equalling to 16.
             case 18: {
@@ -80,7 +80,7 @@ public class voltageDropTest {
                 double redesign = 20.4 - voltageDrop;
                 // Calculating Allowable Length
                 double allowableLength = LENGTH / (2 * current * VD_18);
-                checker(dec, redesign, allowableLength);
+                checker(dec, redesign, allowableLength, current, length);
                 break;
             } // end if for AWG equalling to 18
             case 22: {
@@ -93,7 +93,7 @@ public class voltageDropTest {
                 double redesign = 20.4 - voltageDrop;
                 // Calculating Allowable Length
                 double allowableLength = LENGTH / (2 * current * VD_22);
-                checker(dec, redesign, allowableLength);
+                checker(dec, redesign, allowableLength, current, length);
                 break;
             } // end if for AWG eqaulling to 22
             case 24: {
@@ -106,7 +106,7 @@ public class voltageDropTest {
                 double redesign = 20.4 - voltageDrop;
                 // Calculating Allowable Length
                 double allowableLength = LENGTH / (2 * current * VD_24);
-                checker(dec, redesign, allowableLength);
+                checker(dec, redesign, allowableLength, current, length);
                 break;
             } // end if the AWG eqauls to 24
         }
@@ -143,12 +143,16 @@ public class voltageDropTest {
         return result;
     }
 
-    public static void checker(DecimalFormat dec, double redesign, double allowableLength) {
+    public static void checker(DecimalFormat dec, double redesign, double allowableLength, double current, double length) {
+        String currentNeeded = "Amount of current needed (Amps): " + current;
+        String lengthNeeded = "\nEstimated length needed (feet): " + length;
         if (redesign < 16) {
-            JOptionPane.showMessageDialog(null, "Warning! You have to redesign your circuit! ", "Warning!", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, currentNeeded + lengthNeeded + 
+                                          "\nWarning! You have to redesign your circuit! ", "Warning!", JOptionPane.WARNING_MESSAGE);
         }
         else if (redesign >= 16) {
-            JOptionPane.showMessageDialog(null, "Your circuit is okay!" + "\n" + "The voltage at last device is: " + dec.format(redesign) + "\n" + "The allowable length is: " + dec.format(allowableLength) + " feet.");
+            JOptionPane.showMessageDialog(null, currentNeeded + lengthNeeded + "\nYour circuit is okay!\n" + "The voltage at last device is: " +
+                                         dec.format(redesign) + "\nThe allowable length is: " + dec.format(allowableLength) + " feet.");
         }
     }
 } // end public class VoltageDrop
