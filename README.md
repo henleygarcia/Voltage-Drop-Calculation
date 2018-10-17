@@ -1,4 +1,4 @@
-# voltagedrop
+# Voltage Drop Calculation
 
 Voltage Drop Calculation by Henley Garcia
 
