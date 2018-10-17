@@ -52,7 +52,7 @@ This way prevents an infinite loop and is much more friendly than the previous s
 2016
 
 0.5
-Created a function to reduce the decimal count so it looks more professonal
+Created a function to reduce the decimal count so it looks more professonal using the DecimalFormat class.
 
 Old: 2.526621321
 New: 2.52
@@ -61,5 +61,6 @@ New: 2.52
 Changed up some the GUI designs to more friendly based system with a drop down menu instead of manually typing in the AWG.
 
 2018
+0.7
 
-Made some object oriented programming adjustments so the program is cleaner now.
+Made some object oriented programming adjustments so the program is cleaner now. As well as fixed bug that when a user enters a negative number the dialog will ask the user for the number again because it is a negative number. This calculation doesn't allow negative numbers.
