@@ -123,23 +123,23 @@ public class voltageDropTest {
     } // end main method
 
     public static double[] userPrompt() {
-        boolean curNegative = false;
-        boolean lenNegative = false;
-        double current = 0;
-        double length = 0;
+        boolean curNegative;
+        boolean lenNegative;
+        double currentIn = 0;
+        double lengthIn = 0;
         do {
             String currentInput = JOptionPane.showInputDialog("Please enter the amount of current needed in Amps (must be positive): ");
-            current = Double.parseDouble(currentInput);
-            curNegative = current < 0;
+            currentIn = Double.parseDouble(currentInput);
+            curNegative = currentIn < 0;
         } while (curNegative);
 
         do {
             String lengthInput = JOptionPane.showInputDialog("Please enter the estimated length needed in feet (must be positive): ");
-            length = Double.parseDouble(lengthInput);
-            lenNegative = length < 0;
+            lengthIn = Double.parseDouble(lengthInput);
+            lenNegative = lengthIn < 0;
         } while (lenNegative);
 
-        double[] result = {current, length};
+        double[] result = {currentIn, lengthIn};
         return result;
     }
 
