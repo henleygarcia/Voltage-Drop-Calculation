@@ -61,6 +61,7 @@ New: 2.52
 Changed up some the GUI designs to more friendly based system with a drop down menu instead of manually typing in the AWG.
 
 2018
+
 0.7
 
 Made some object oriented programming adjustments so the program is cleaner now. As well as fixed bug that when a user enters a negative number the dialog will ask the user for the number again because it is a negative number. This calculation doesn't allow negative numbers.
