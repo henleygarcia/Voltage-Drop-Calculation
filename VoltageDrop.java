@@ -13,6 +13,7 @@ public class voltageDropTest {
     static DecimalFormat dec = new DecimalFormat("###.##");
 
     static final double LENGTH = 3.47;
+    static final double REDESIGN = 20.4;
     static final double VD_12 = 0.0020;
     static final double VD_14 = 0.0031;
     static final double VD_16 = 0.0050;
@@ -38,7 +39,7 @@ public class voltageDropTest {
                 // Calculating Voltage Drop
                 double voltageDrop = 2 * (length * current * VD_12);
                 // Calculating Redesign Amount
-                double redesign = 20.4 - voltageDrop;
+                double redesign = REDESIGN - voltageDrop;
                 // Calculating Allowable Length
                 double allowableLength = LENGTH / (2 * current * VD_12);
                 checker(dec, redesign, allowableLength, current, length);
@@ -51,7 +52,7 @@ public class voltageDropTest {
                 // Calculating Voltage Drop
                 double voltageDrop = 2 * (length * current * VD_14);
                 // Calculating Redesign Amount
-                double redesign = 20.4 - voltageDrop;
+                double redesign = REDESIGN - voltageDrop;
                 // Calculating Allowable Length
                 double allowableLength = LENGTH / (2 * current * VD_14);
                 checker(dec, redesign, allowableLength, current, length);
@@ -64,7 +65,7 @@ public class voltageDropTest {
                 // Calculating Voltage Drop
                 double voltageDrop = 2 * (length * current * VD_16);
                 // Calculating Redesign Amount
-                double redesign = 20.4 - voltageDrop;
+                double redesign = REDESIGN - voltageDrop;
                 // Calculating Allowable Length
                 double allowableLength = LENGTH / (2 * current * VD_16);
                 checker(dec, redesign, allowableLength, current, length);
@@ -77,7 +78,7 @@ public class voltageDropTest {
                 // Calculating Voltage Drop
                 double voltageDrop = 2 * (length * current * VD_18);
                 // Calculating Redesign Amount
-                double redesign = 20.4 - voltageDrop;
+                double redesign = REDESIGN - voltageDrop;
                 // Calculating Allowable Length
                 double allowableLength = LENGTH / (2 * current * VD_18);
                 checker(dec, redesign, allowableLength, current, length);
@@ -90,7 +91,7 @@ public class voltageDropTest {
                 // Calculating Voltage Drop
                 double voltageDrop = 2 * (length * current * VD_22);
                 // Calculating Redesign Amount
-                double redesign = 20.4 - voltageDrop;
+                double redesign = REDESIGN - voltageDrop;
                 // Calculating Allowable Length
                 double allowableLength = LENGTH / (2 * current * VD_22);
                 checker(dec, redesign, allowableLength, current, length);
@@ -103,7 +104,7 @@ public class voltageDropTest {
                 // Calculating Voltage Drop
                 double voltageDrop = 2 * (length * current * VD_24);
                 // Calculating Redesign Amount
-                double redesign = 20.4 - voltageDrop;
+                double redesign = REDESIGN - voltageDrop;
                 // Calculating Allowable Length
                 double allowableLength = LENGTH / (2 * current * VD_24);
                 checker(dec, redesign, allowableLength, current, length);
