@@ -30,108 +30,86 @@ public class voltageDropTest {
                 JOptionPane.INFORMATION_MESSAGE, null, AWG1, AWG1[0]);
 
         // Go through based on what the user chooses on the AWG
-        if (input == 12) {
-            double[] results = userPrompt();
-            double current = results[0];
-            double length = results[0];
-            // Calculating Voltage Drop
-            double voltageDrop = 2 * (length * current * VD_12);
-
-            // Calculating Redesign Amount
-            double redesign = 20.4 - voltageDrop;
-
-            // Calculating Allowable Length
-            double allowableLength = LENGTH / (2 * current * VD_12);
-
-            checker(dec, redesign, allowableLength);
-
-        } // end if for AWG equalling to 12
-
-        else if (input == 14) {
-            double[] results = userPrompt();
-            double current = results[0];
-            double length = results[0];
-
-            // Calculating Voltage Drop
-            double voltageDrop = 2 * (length * current * VD_14);
-
-            // Calculating Redesign Amount
-            double redesign = 20.4 - voltageDrop;
-
-            // Calculating Allowable Length
-            double allowableLength = LENGTH / (2 * current * VD_14);
-
-            checker(dec, redesign, allowableLength);
-        } // end if for AWG equalling to 14
-
-        else if (input == 16) {
-            double[] results = userPrompt();
-            double current = results[0];
-            double length = results[0];
-
-            // Calculating Voltage Drop
-            double voltageDrop = 2 * (length * current * VD_16);
-
-            // Calculating Redesign Amount
-            double redesign = 20.4 - voltageDrop;
-
-            // Calculating Allowable Length
-            double allowableLength = LENGTH / (2 * current * VD_16);
-
-            checker(dec, redesign, allowableLength);
-        } // end if for AWG equalling to 16.
-
-        else if (input == 18) {
-            double[] results = userPrompt();
-            double current = results[0];
-            double length = results[0];
-
-            // Calculating Voltage Drop
-            double voltageDrop = 2 * (length * current * VD_18);
-
-            // Calculating Redesign Amount
-            double redesign = 20.4 - voltageDrop;
-
-            // Calculating Allowable Length
-            double allowableLength = LENGTH / (2 * current * VD_18);
-
-            checker(dec, redesign, allowableLength);
-        } // end if for AWG equalling to 18
-
-        // If the user enters for the input > 18 or < 10 for the AWG it will prompt the user with an error of invalid input for AWG.
-        else if (input == 22) {
-            double[] results = userPrompt();
-            double current = results[0];
-            double length = results[0];
-
-            // Calculating Voltage Drop
-            double voltageDrop = 2 * (length * current * VD_22);
-
-            // Calculating Redesign Amount
-            double redesign = 20.4 - voltageDrop;
-
-            // Calculating Allowable Length
-            double allowableLength = LENGTH / (2 * current * VD_22);
-
-            checker(dec, redesign, allowableLength);
-        } // end if for AWG eqaulling to 22
-
-        else if (input == 24) {
-            double[] results = userPrompt();
-            double current = results[0];
-            double length = results[0];
-
-            // Calculating Voltage Drop
-            double voltageDrop = 2 * (length * current * VD_24);
-
-            // Calculating Redesign Amount
-            double redesign = 20.4 - voltageDrop;
-
-            // Calculating Allowable Length
-            double allowableLength = LENGTH / (2 * current * VD_24);
-
-            checker(dec, redesign, allowableLength);
-        } // end if the AWG eqauls to 24
+        switch ((int) input) {
+            case 12: {
+                double[] results = userPrompt();
+                double current = results[0];
+                double length = results[0];
+                // Calculating Voltage Drop
+                double voltageDrop = 2 * (length * current * VD_12);
+                // Calculating Redesign Amount
+                double redesign = 20.4 - voltageDrop;
+                // Calculating Allowable Length
+                double allowableLength = LENGTH / (2 * current * VD_12);
+                checker(dec, redesign, allowableLength);
+                break;
+            } // end if for AWG equalling to 12
+            case 14: {
+                double[] results = userPrompt();
+                double current = results[0];
+                double length = results[0];
+                // Calculating Voltage Drop
+                double voltageDrop = 2 * (length * current * VD_14);
+                // Calculating Redesign Amount
+                double redesign = 20.4 - voltageDrop;
+                // Calculating Allowable Length
+                double allowableLength = LENGTH / (2 * current * VD_14);
+                checker(dec, redesign, allowableLength);
+                break;
+            } // end if for AWG equalling to 14
+            case 16: {
+                double[] results = userPrompt();
+                double current = results[0];
+                double length = results[0];
+                // Calculating Voltage Drop
+                double voltageDrop = 2 * (length * current * VD_16);
+                // Calculating Redesign Amount
+                double redesign = 20.4 - voltageDrop;
+                // Calculating Allowable Length
+                double allowableLength = LENGTH / (2 * current * VD_16);
+                checker(dec, redesign, allowableLength);
+                break;
+            } // end if for AWG equalling to 16.
+            case 18: {
+                double[] results = userPrompt();
+                double current = results[0];
+                double length = results[0];
+                // Calculating Voltage Drop
+                double voltageDrop = 2 * (length * current * VD_18);
+                // Calculating Redesign Amount
+                double redesign = 20.4 - voltageDrop;
+                // Calculating Allowable Length
+                double allowableLength = LENGTH / (2 * current * VD_18);
+                checker(dec, redesign, allowableLength);
+                break;
+            } // end if for AWG equalling to 18
+            case 22: {
+                double[] results = userPrompt();
+                double current = results[0];
+                double length = results[0];
+                // Calculating Voltage Drop
+                double voltageDrop = 2 * (length * current * VD_22);
+                // Calculating Redesign Amount
+                double redesign = 20.4 - voltageDrop;
+                // Calculating Allowable Length
+                double allowableLength = LENGTH / (2 * current * VD_22);
+                checker(dec, redesign, allowableLength);
+                break;
+            } // end if for AWG eqaulling to 22
+            case 24: {
+                double[] results = userPrompt();
+                double current = results[0];
+                double length = results[0];
+                // Calculating Voltage Drop
+                double voltageDrop = 2 * (length * current * VD_24);
+                // Calculating Redesign Amount
+                double redesign = 20.4 - voltageDrop;
+                // Calculating Allowable Length
+                double allowableLength = LENGTH / (2 * current * VD_24);
+                checker(dec, redesign, allowableLength);
+                break;
+            } // end if the AWG eqauls to 24
+        }
 
         // Ask if you want to do another calculation
         if (JOptionPane.showConfirmDialog(null, "Would you like to do another calculation?", "Voltage Drop Calculation", 0) == 0) {
