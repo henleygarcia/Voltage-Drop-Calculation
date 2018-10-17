@@ -34,7 +34,7 @@ public class voltageDropTest {
             case 12: {
                 double[] results = userPrompt();
                 double current = results[0];
-                double length = results[0];
+                double length = results[1];
                 // Calculating Voltage Drop
                 double voltageDrop = 2 * (length * current * VD_12);
                 // Calculating Redesign Amount
@@ -47,7 +47,7 @@ public class voltageDropTest {
             case 14: {
                 double[] results = userPrompt();
                 double current = results[0];
-                double length = results[0];
+                double length = results[1];
                 // Calculating Voltage Drop
                 double voltageDrop = 2 * (length * current * VD_14);
                 // Calculating Redesign Amount
@@ -60,7 +60,7 @@ public class voltageDropTest {
             case 16: {
                 double[] results = userPrompt();
                 double current = results[0];
-                double length = results[0];
+                double length = results[1];
                 // Calculating Voltage Drop
                 double voltageDrop = 2 * (length * current * VD_16);
                 // Calculating Redesign Amount
@@ -73,7 +73,7 @@ public class voltageDropTest {
             case 18: {
                 double[] results = userPrompt();
                 double current = results[0];
-                double length = results[0];
+                double length = results[1];
                 // Calculating Voltage Drop
                 double voltageDrop = 2 * (length * current * VD_18);
                 // Calculating Redesign Amount
@@ -86,7 +86,7 @@ public class voltageDropTest {
             case 22: {
                 double[] results = userPrompt();
                 double current = results[0];
-                double length = results[0];
+                double length = results[1];
                 // Calculating Voltage Drop
                 double voltageDrop = 2 * (length * current * VD_22);
                 // Calculating Redesign Amount
@@ -98,8 +98,8 @@ public class voltageDropTest {
             } // end if for AWG eqaulling to 22
             case 24: {
                 double[] results = userPrompt();
-                double current = results[0];
-                double length = results[0];
+                double current = results[0]; 
+                double length = results[1];
                 // Calculating Voltage Drop
                 double voltageDrop = 2 * (length * current * VD_24);
                 // Calculating Redesign Amount
@@ -116,10 +116,8 @@ public class voltageDropTest {
             main(args);
         }
         else {
-
             System.exit(0); // close out of the program.
         }
-
     } // end main method
 
     public static double[] userPrompt() {
@@ -147,12 +145,12 @@ public class voltageDropTest {
         String currentNeeded = "Amount of current needed (Amps): " + current;
         String lengthNeeded = "\nEstimated length needed (feet): " + length;
         if (redesign < 16) {
-            JOptionPane.showMessageDialog(null, currentNeeded + lengthNeeded + 
-                                          "\nWarning! You have to redesign your circuit! ", "Warning!", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, currentNeeded + lengthNeeded
+                    + "\nWarning! You have to redesign your circuit! ", "Warning!", JOptionPane.WARNING_MESSAGE);
         }
         else if (redesign >= 16) {
-            JOptionPane.showMessageDialog(null, currentNeeded + lengthNeeded + "\nYour circuit is okay!\n" + "The voltage at last device is: " +
-                                         dec.format(redesign) + "\nThe allowable length is: " + dec.format(allowableLength) + " feet.");
+            JOptionPane.showMessageDialog(null, currentNeeded + lengthNeeded + "\nYour circuit is okay!\n" + "The voltage at last device is: "
+                    + dec.format(redesign) + "\nThe allowable length is: " + dec.format(allowableLength) + " feet.");
         }
     }
 } // end public class VoltageDrop
