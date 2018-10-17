@@ -2,7 +2,7 @@
 import java.text.*;
 import javax.swing.*;
 
-public class VoltageDrop {
+public class voltageDropTest {
 
     static double voltageDrop;
     static double current;
@@ -12,13 +12,13 @@ public class VoltageDrop {
 
     static DecimalFormat dec = new DecimalFormat("###.##");
 
-    static final double lengthConst = 3.47;
-    static final double const12 = 0.0020;
-    static final double const14 = 0.0031;
-    static final double const16 = 0.0050;
-    static final double const18 = 0.0128;
-    static final double const22 = 0.02036;
-    static final double const24 = 0.0080;
+    static final double LENGTH = 3.47;
+    static final double VD_12 = 0.0020;
+    static final double VD_14 = 0.0031;
+    static final double VD_16 = 0.0050;
+    static final double VD_18 = 0.0128;
+    static final double VD_22 = 0.02036;
+    static final double VD_24 = 0.0080;
 
     public static void main(String[] args) {
 
@@ -35,13 +35,13 @@ public class VoltageDrop {
             double current = results[0];
             double length = results[0];
             // Calculating Voltage Drop
-            double voltageDrop = 2 * (length * current * const12);
+            double voltageDrop = 2 * (length * current * VD_12);
 
             // Calculating Redesign Amount
             double redesign = 20.4 - voltageDrop;
 
             // Calculating Allowable Length
-            double allowableLength = lengthConst / (2 * current * const12);
+            double allowableLength = LENGTH / (2 * current * VD_12);
 
             checker(dec, redesign, allowableLength);
 
@@ -53,13 +53,13 @@ public class VoltageDrop {
             double length = results[0];
 
             // Calculating Voltage Drop
-            double voltageDrop = 2 * (length * current * const14);
+            double voltageDrop = 2 * (length * current * VD_14);
 
             // Calculating Redesign Amount
             double redesign = 20.4 - voltageDrop;
 
             // Calculating Allowable Length
-            double allowableLength = lengthConst / (2 * current * const14);
+            double allowableLength = LENGTH / (2 * current * VD_14);
 
             checker(dec, redesign, allowableLength);
         } // end if for AWG equalling to 14
@@ -70,13 +70,13 @@ public class VoltageDrop {
             double length = results[0];
 
             // Calculating Voltage Drop
-            double voltageDrop = 2 * (length * current * const16);
+            double voltageDrop = 2 * (length * current * VD_16);
 
             // Calculating Redesign Amount
             double redesign = 20.4 - voltageDrop;
 
             // Calculating Allowable Length
-            double allowableLength = lengthConst / (2 * current * const16);
+            double allowableLength = LENGTH / (2 * current * VD_16);
 
             checker(dec, redesign, allowableLength);
         } // end if for AWG equalling to 16.
@@ -87,13 +87,13 @@ public class VoltageDrop {
             double length = results[0];
 
             // Calculating Voltage Drop
-            double voltageDrop = 2 * (length * current * const18);
+            double voltageDrop = 2 * (length * current * VD_18);
 
             // Calculating Redesign Amount
             double redesign = 20.4 - voltageDrop;
 
             // Calculating Allowable Length
-            double allowableLength = lengthConst / (2 * current * const18);
+            double allowableLength = LENGTH / (2 * current * VD_18);
 
             checker(dec, redesign, allowableLength);
         } // end if for AWG equalling to 18
@@ -105,13 +105,13 @@ public class VoltageDrop {
             double length = results[0];
 
             // Calculating Voltage Drop
-            double voltageDrop = 2 * (length * current * const22);
+            double voltageDrop = 2 * (length * current * VD_22);
 
             // Calculating Redesign Amount
             double redesign = 20.4 - voltageDrop;
 
             // Calculating Allowable Length
-            double allowableLength = lengthConst / (2 * current * const22);
+            double allowableLength = LENGTH / (2 * current * VD_22);
 
             checker(dec, redesign, allowableLength);
         } // end if for AWG eqaulling to 22
@@ -122,13 +122,13 @@ public class VoltageDrop {
             double length = results[0];
 
             // Calculating Voltage Drop
-            double voltageDrop = 2 * (length * current * const24);
+            double voltageDrop = 2 * (length * current * VD_24);
 
             // Calculating Redesign Amount
             double redesign = 20.4 - voltageDrop;
 
             // Calculating Allowable Length
-            double allowableLength = lengthConst / (2 * current * const24);
+            double allowableLength = LENGTH / (2 * current * VD_24);
 
             checker(dec, redesign, allowableLength);
         } // end if the AWG eqauls to 24
