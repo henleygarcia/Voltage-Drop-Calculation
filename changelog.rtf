@@ -1,0 +1,39 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 HelveticaNeue-Bold;}
+{\colortbl;\red255\green255\blue255;\red27\green31\blue34;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c14118\c16078\c18039;\cssrgb\c100000\c100000\c100000;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+Change log for Voltage Drop Calculation Program by Henley Garcia\cb1 \
+
+\f1\b \cb3 2015
+\f0\b0 \cb1 \
+\cb3 0.1 Initial version of the program where you had to type in the AWG manually yourself.\cb1 \
+\cb3 The AWG list that supported were 10, 12, 14, 16, and 18 at the time. Introduced a loop based system that can restart the program if you need to do another calculation.\cb1 \
+\cb3 0.1.1\cb1 \
+\cb3 Fixed infinite loop bug where even the compiler wasn't reading the program. Removed loop to restart the program if necessary.\cb1 \
+\cb3 0.2\cb1 \
+\cb3 Changed program to a 64 bit system in case there are large numbers being shown to the user. Adjusted the list of AWG supported to now 12, 14, 16, 18, 22, and 24.\cb1 \
+\cb3 0.2.1\cb1 \
+\cb3 Some grammar fixes and adjustments in wording.\cb1 \
+\cb3 New version: Enter the amount of current needed (in Amps) Old version: Enter the amount of current needed\cb1 \
+\cb3 0.2.2\cb1 \
+\cb3 Added some branding labels like on the top it says Voltage Drop Calculation\cb1 \
+\cb3 0.3\cb1 \
+\cb3 Added calculation if you need to redesign your circuit with appropiate dialog box.\cb1 \
+\cb3 0.4\cb1 \
+\cb3 Add new improved restart system where the program will ask "Would you like to do another calculation?" This way prevents an infinite loop and is much more friendly than the previous system with the option of exiting out of the program.\cb1 \
+
+\f1\b \cb3 2016
+\f0\b0 \cb1 \
+\cb3 0.5 Created a function to reduce the decimal count so it looks more professional using the DecimalFormat class.\cb1 \
+\cb3 Old: 2.526621321 New: 2.52\cb1 \
+\cb3 0.6 Changed up some the GUI designs to more friendly based system with a drop down menu instead of manually typing in the AWG.\cb1 \
+
+\f1\b \cb3 2018
+\f0\b0 \cb1 \
+\cb3 0.7\cb1 \
+\cb3 Made some object oriented programming adjustments so the program is cleaner now. As well as fixed bug that when a user enters a negative number the dialog will ask the user for the number again because it is a negative number. This calculation doesn't allow negative numbers.}
