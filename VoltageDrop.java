@@ -126,7 +126,7 @@ public class voltageDropTest {
         double currentIn = 0;
         double lengthIn = 0;
         do {
-            String currentInput = JOptionPane.showInputDialog("Please enter the amount of current needed in Amps (must be positive): ");
+            String currentInput = JOptionPane.showInputDialog("Please enter the amount of current needed in amps (must be positive): ");
             currentIn = Double.parseDouble(currentInput);
             curNegative = currentIn < 0;
         } while (curNegative);
